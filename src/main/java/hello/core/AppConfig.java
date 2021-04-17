@@ -16,6 +16,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AppConfig {
     //CTRL + ALT + N
+    // @Bean memberService -> memberRepository
+    //@Bean orderService -> memberRepository  2개의 MemoryMemberReposiry가 생긴다
     @Bean
     public MemberService memberService() {
         return new MemberServiceImpl(memberRepository()); // 생성자 주입
